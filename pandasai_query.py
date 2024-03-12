@@ -25,12 +25,6 @@ if st.button("Answer"):
     # Result 
     result = pandasa.chat(prompt)
     
-    # Resetting the index
-    # result = result.reset_index().drop('index', axis=1)
-    
-    # if type(result) == int:
-    #     st.dataframe(result, use_container_width=True)
-    # else:
     st.write(result)
 
     st.balloons()
