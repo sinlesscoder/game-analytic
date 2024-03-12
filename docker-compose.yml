@@ -1,0 +1,26 @@
+version: '3.3'
+
+services:
+  MongoDB Instance
+  game_project_mongodb:
+    container_name: game_project_ali_mongodb
+    image: mongo:4.4.20
+    ports:
+      - 8057:27017
+    restart: on-failure
+  
+  MySQL Instance
+  game_project_ali_mysql:
+    container_name: game_project_ali_mysql
+    image: mysql
+    ports:
+      - 8058:3306
+    restart: on-failure
+
+  # PostgreSQL Server
+  ali_project_5_postgres:
+    container_name: game_project_ali_postgres
+    image: postgres:12.14
+    ports:
+      - '5432:5432'
+    restart: on-failure
